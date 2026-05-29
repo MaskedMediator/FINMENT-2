@@ -11,7 +11,7 @@ export default function Home() {
   const serviceDetails = {
     'Plumbing Services': {
       description: 'Leaks, blockages, installations',
-      details: 'Burst pipes, leaking taps, blocked drains, geyser lines — we handle it. We'll find the problem fast and fix it right.',
+      details: "Burst pipes, leaking taps, blocked drains, geyser lines — we handle it. We'll find the problem fast and fix it right.",
       price: 'From N$250',
       time: '1-3 hours',
       icon: '🔧'
@@ -25,7 +25,7 @@ export default function Home() {
     },
     'Air Conditioner Repairs': {
       description: 'AC install & fixes',
-      details: 'AC not cooling? We service, repair, and install units. Works in Windhoek\'s heat — guaranteed.',
+      details: "AC not cooling? We service, repair, and install units. Works in Windhoek's heat — guaranteed.",
       price: 'From N$300',
       time: '1-2 hours',
       icon: '❄️'
