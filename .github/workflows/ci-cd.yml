@@ -1,0 +1,112 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Format check
+        run: npm run format -- --check
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build application
+        run: npm run build
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/coverage-final.json
+          fail_ci_if_error: false
+
+  deploy-preview:
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy preview to Vercel
+        uses: vercel/action@main
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+
+  deploy-production:
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Vercel
+        uses: vercel/action@main
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+          prod: true
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
