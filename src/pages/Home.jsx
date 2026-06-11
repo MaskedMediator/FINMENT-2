@@ -73,29 +73,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="text-white space-y-4 sm:space-y-6 animate-slideInLeft">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                When Your Fridge Dies, We Fix It
+                Cooling & Technical Services
               </h1>
+              <p className="text-lg sm:text-xl font-semibold text-red-300 mb-2">Services Beyond Expectations</p>
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                Fridge stopped? Geyser broken? Washing machine acting up? We've been fixing these things in Windhoek for 6 years. Same-day service, no excuses.
+                Superior cooling and technical repair services in Swakopmund. Reliable, on-time field support for all your appliance needs. We don't just fix problems — we exceed expectations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="tel:+264812095555" className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-deep">
+                <a href="tel:+26481 8105882" className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-deep">
                   <span>📞 Call Now</span>
                 </a>
-              </div>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-4 pt-6 sm:pt-8 border-t border-gray-400">
-                <div className="text-left sm:text-center flex-1">
-                  <p className="text-2xl sm:text-3xl font-bold">2,000+</p>
-                  <p className="text-xs sm:text-sm text-gray-200">Repairs since 2018</p>
-                </div>
-                <div className="text-left sm:text-center flex-1">
-                  <p className="text-2xl sm:text-3xl font-bold">Same day</p>
-                  <p className="text-xs sm:text-sm text-gray-200">Usually available</p>
-                </div>
-                <div className="text-left sm:text-center flex-1">
-                  <p className="text-2xl sm:text-3xl font-bold">2-year</p>
-                  <p className="text-xs sm:text-sm text-gray-200">Warranty on repairs</p>
-                </div>
               </div>
             </div>
             <div></div>
@@ -110,7 +97,7 @@ export default function Home() {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">What We Fix</h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
-            All the stuff that breaks at the worst possible times
+            Professional cooling and technical services for all your appliances
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -127,7 +114,7 @@ export default function Home() {
             },
             {
               title: 'Air Conditioner Repairs',
-              description: 'AC maintenance and repair services',
+              description: 'AC maintenance, repair & installation',
               icon: '❄️',
             },
             {
@@ -179,7 +166,7 @@ export default function Home() {
               </div>
               <div className="flex justify-between items-center pb-2 border-b border-gray-300">
                 <span className="font-semibold text-gray-700">Saturday</span>
-                <span className="text-gray-600">8:00 AM - 1:00 PM</span>
+                <span className="text-gray-600 font-semibold">Closed</span>
               </div>
               <div className="flex justify-between items-center pb-2 border-b border-gray-300">
                 <span className="font-semibold text-gray-700">Sunday</span>
@@ -187,7 +174,7 @@ export default function Home() {
               </div>
               <div className="mt-6 p-4 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-blue-800 font-semibold">📞 24/7 Support Available</p>
-                <a href="tel:+264812095555" className="text-primary font-bold text-lg hover:text-blue-700">+264 812 0955</a>
+                <a href="tel:+26481 8105882" className="text-primary font-bold text-lg hover:text-blue-700">+264 81 8105 882</a>
               </div>
             </div>
           </div>
@@ -301,7 +288,7 @@ export default function Home() {
                   Book This Service
                 </Link>
                 <a
-                  href="tel:+264812095555"
+                  href="tel:+26481 8105882"
                   className="flex-1 btn-secondary text-center active:scale-95"
                 >
                   📞 Call for Quote

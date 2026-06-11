@@ -26,7 +26,7 @@ export default function Footer() {
               <h3 className="text-white text-lg font-bold">FINMENT</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Professional plumbing and appliance repair solutions for Namibia. Your trusted repair partner for all your home appliance needs.
+              Professional cooling and technical services in Namibia. Your trusted partner for superior, reliable, on-time appliance repairs and maintenance.
             </p>
           </div>
 
@@ -40,14 +40,6 @@ export default function Footer() {
                 <Link to="/" className="text-gray-300 hover:text-white transition relative group">
                   <span className="flex items-center space-x-2">
                     <span>Home</span>
-                    <span className="inline-block w-0 h-0.5 bg-gradient-to-r from-blue-400 to-emerald-400 group-hover:w-4 transition-all duration-300"></span>
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition relative group">
-                  <span className="flex items-center space-x-2">
-                    <span>About</span>
                     <span className="inline-block w-0 h-0.5 bg-gradient-to-r from-blue-400 to-emerald-400 group-hover:w-4 transition-all duration-300"></span>
                   </span>
                 </Link>
@@ -73,19 +65,19 @@ export default function Footer() {
                 <div className="p-2 bg-red-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <Phone size={16} />
                 </div>
-                <a href="tel:+264812095555" className="hover:text-red-400">+264 812 0955</a>
+                <a href="tel:+26481 8105882" className="hover:text-red-400">+264 81 8105 882</a>
               </li>
               <li className="flex items-center space-x-3 text-gray-300 hover:text-white transition group">
                 <div className="p-2 bg-emerald-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <Mail size={16} />
                 </div>
-                <span>info@finment.com.na</span>
+                <span>Finmentoffiice@gmail.com</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-300 hover:text-white transition group">
                 <div className="p-2 bg-purple-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <MapPin size={16} />
                 </div>
-                <span>Windhoek, Namibia</span>
+                <span>Swakopmund, Namibia</span>
               </li>
             </ul>
           </div>

@@ -1,8 +1,8 @@
-# FridgeFix - Fast Appliance Repair Booking
+# FINMENT - Cooling & Technical Services
 
-Professional fridge and appliance repair service in Namibia. Book online in 60 seconds and get qua;ity service.
+Professional cooling and technical repair services in Swakopmund, Namibia. Superior, reliable, on-time service. Book online or call for immediate support.
 
-**Live Demo**: Coming soon  
+**Live Demo**: https://fridgefix-namibia.vercel.app  
 **Documentation**: See `/docs` folder
 
 ## 🚀 Quick Start
@@ -285,4 +285,4 @@ MIT License - feel free to use for personal or commercial projects
 
 **Last Updated**: March 2026  
 **Version**: 1.0.0  
-Made with ❤️ for Windhoek, Namibia
+Made with ❤️ for Swakopmund, Namibia

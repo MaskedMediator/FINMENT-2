@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Contact</h2>
-          <p>Email: info@finment.com.na</p>
+          <p>Email: Finmentoffiice@gmail.com</p>
         </section>
       </div>
     </div>
