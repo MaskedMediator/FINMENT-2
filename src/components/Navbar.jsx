@@ -31,10 +31,10 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
             </Link>
             <a 
-              href="tel:+26481 8105882" 
+              href="tel:+264818105882" 
               className="flex items-center space-x-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition"
             >
-              <span>📞 +264 81 8105 882</span>
+              <span>📞 +264 81 810 5882</span>
             </a>
           </div>
 
@@ -61,10 +61,10 @@ export default function Navbar() {
               Privacy Policy
             </Link>
             <a
-              href="tel:+264812095555"
+              href="tel:+264818105882"
               className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white rounded-lg transition font-medium"
             >
-              📞 +264 812 0955
+              📞 +264 81 810 5882
             </a>
           </div>
         )}

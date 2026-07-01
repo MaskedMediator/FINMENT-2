@@ -65,19 +65,25 @@ export default function Footer() {
                 <div className="p-2 bg-red-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <Phone size={16} />
                 </div>
-                <a href="tel:+26481 8105882" className="hover:text-red-400">+264 81 8105 882</a>
+                <div className="flex flex-col">
+                  <a href="tel:+264818105882" className="hover:text-red-400">+264 81 810 5882 (Office)</a>
+                  <a href="tel:+264812095555" className="hover:text-red-400 text-xs">+264 81 209 5555 (Cell)</a>
+                </div>
               </li>
               <li className="flex items-center space-x-3 text-gray-300 hover:text-white transition group">
                 <div className="p-2 bg-emerald-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <Mail size={16} />
                 </div>
-                <span>Finmentoffiice@gmail.com</span>
+                <div className="flex flex-col text-xs space-y-1">
+                  <a href="mailto:finmentinvestments@gmail.com" className="hover:text-emerald-400">finmentinvestments@gmail.com</a>
+                  <a href="mailto:finmentoffice@gmail.com" className="hover:text-emerald-400">finmentoffice@gmail.com</a>
+                </div>
               </li>
               <li className="flex items-center space-x-3 text-gray-300 hover:text-white transition group">
                 <div className="p-2 bg-purple-500 bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition">
                   <MapPin size={16} />
                 </div>
-                <span>Swakopmund, Namibia</span>
+                <span>Unit 1, Multi-purpose Centre Building, Swakopmund, Namibia</span>
               </li>
             </ul>
           </div>

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
-  ChevronRight,
   X,
 } from 'lucide-react';
 
@@ -25,7 +23,7 @@ export default function Home() {
     },
     'Air Conditioner Repairs': {
       description: 'AC install & fixes',
-      details: "AC not cooling? We service, repair, and install units. Works in Windhoek's heat — guaranteed.",
+      details: 'AC not cooling? We service, repair, and install units. Built for the Swakopmund and Erongo climate.',
       price: 'From N$300',
       time: '1-2 hours',
       icon: '❄️'
@@ -50,6 +48,20 @@ export default function Home() {
       price: 'From N$250',
       time: '1-3 hours',
       icon: '🧺'
+    },
+    'Electrical Services': {
+      description: 'Wiring, lighting & upgrades',
+      details: 'Safe and efficient electrical services for residential and commercial clients. Qualified electricians ensuring compliance with safety standards and regulations.',
+      price: 'From N$300',
+      time: '2-4 hours',
+      icon: '⚡'
+    },
+    'Building Renovations': {
+      description: 'Tiling, painting & construction',
+      details: 'Professional building and renovation services including floor/wall tiling, interior/exterior painting, ceiling installation, and general construction work.',
+      price: 'Quote on request',
+      time: 'Varies',
+      icon: '🏗️'
     }
   };
 
@@ -77,10 +89,10 @@ export default function Home() {
               </h1>
               <p className="text-lg sm:text-xl font-semibold text-red-300 mb-2">Services Beyond Expectations</p>
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                Superior cooling and technical repair services in Swakopmund. Reliable, on-time field support for all your appliance needs. We don't just fix problems — we exceed expectations.
+                Superior cooling and technical repair services in Swakopmund. Reliable, on-time field support for all your appliance needs. We don&apos;t just fix problems — we exceed expectations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="tel:+26481 8105882" className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-deep">
+                <a href="tel:+264818105882" className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-deep">
                   <span>📞 Call Now</span>
                 </a>
               </div>
@@ -132,6 +144,16 @@ export default function Home() {
               description: 'Washing machine maintenance and repair',
               icon: '🧺',
             },
+            {
+              title: 'Electrical Services',
+              description: 'Wiring, lighting and system upgrades',
+              icon: '⚡',
+            },
+            {
+              title: 'Building Renovations',
+              description: 'Tiling, painting and construction work',
+              icon: '🏗️',
+            },
           ].map((service, idx) => (
             <div
               key={idx}
@@ -174,7 +196,7 @@ export default function Home() {
               </div>
               <div className="mt-6 p-4 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-blue-800 font-semibold">📞 24/7 Support Available</p>
-                <a href="tel:+26481 8105882" className="text-primary font-bold text-lg hover:text-blue-700">+264 81 8105 882</a>
+                <a href="tel:+264818105882" className="text-primary font-bold text-lg hover:text-blue-700">+264 81 810 5882</a>
               </div>
             </div>
           </div>
@@ -182,8 +204,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before & After Gallery */}
+      {/* Service Areas Section */}
       <section className="section-container px-4 sm:px-0 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Service Areas</h2>
+            <p className="text-gray-600 mb-6">We proudly serve the entire Erongo Region:</p>
+            <div className="grid grid-cols-2 gap-4">
+              {['Swakopmund', 'Walvis Bay', 'Henties Bay', 'Arandis', 'Usakos', 'Omaruru', 'Okombahe', 'Uis'].map((area) => (
+                <div key={area} className="flex items-center space-x-2 text-gray-700">
+                  <span className="text-primary font-bold">✓</span>
+                  <span>{area}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Why Choose FINMENT?</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border-l-4 border-primary">
+                <h3 className="font-bold text-gray-900 mb-2">Experienced Professionals</h3>
+                <p className="text-sm text-gray-600">Highly skilled and certified technicians with extensive industry experience.</p>
+              </div>
+              <div className="p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border-l-4 border-secondary">
+                <h3 className="font-bold text-gray-900 mb-2">Customer-Centric Approach</h3>
+                <p className="text-sm text-gray-600">We prioritize customer satisfaction and strive to exceed expectations.</p>
+              </div>
+              <div className="p-4 bg-gradient-to-r from-red-50 to-red-100 rounded-lg border-l-4 border-accent">
+                <h3 className="font-bold text-gray-900 mb-2">Quality Assurance</h3>
+                <p className="text-sm text-gray-600">Top-quality materials and advanced techniques for long-lasting results.</p>
+              </div>
+              <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border-l-4 border-purple-600">
+                <h3 className="font-bold text-gray-900 mb-2">Prompt Response</h3>
+                <p className="text-sm text-gray-600">We understand urgency and provide timely, efficient solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="text-center mb-12 sm:mb-16 animate-fadeInUp">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             Our Work in Action
@@ -227,16 +284,16 @@ export default function Home() {
           <div className="absolute top-10 right-20 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
         </div>
         <div className="section-container text-center relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Your Fridge Isn't Getting Any Closer to Fixed</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Your Fridge Isn&apos;t Getting Any Closer to Fixed</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Call us. We're usually available same day. If we can come today, we will.
+            Call us. We&apos;re usually available same day. If we can come today, we will.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+264812095555"
+              href="tel:+264818105882"
               className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white text-secondary rounded-lg font-bold hover:bg-green-50 transition duration-300 shadow-deep hover:shadow-2xl hover:scale-105 active:scale-95 active:shadow-md text-sm sm:text-base transform"
             >
-              <span>📞 Call +264 812 0955</span>
+              <span>📞 Call +264 81 810 5882</span>
             </a>
           </div>
         </div>
@@ -280,19 +337,18 @@ export default function Home() {
 
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/booking"
-                  onClick={() => setSelectedService(null)}
-                  className="flex-1 btn-primary text-center active:scale-95"
-                >
-                  Book This Service
-                </Link>
                 <a
-                  href="tel:+26481 8105882"
-                  className="flex-1 btn-secondary text-center active:scale-95"
+                  href="tel:+264818105882"
+                  className="flex-1 btn-primary text-center active:scale-95"
                 >
                   📞 Call for Quote
                 </a>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="flex-1 btn-secondary text-center active:scale-95"
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>
