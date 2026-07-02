@@ -71,6 +71,20 @@ export default function PrivacyPolicy() {
             At FINMENT INVESTMENTS CC, we are committed to delivering quality workmanship, dependable service, and customer-focused solutions. Our experienced team strives to complete every project efficiently, safely, and to the highest professional standards, ensuring complete client satisfaction.
           </p>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Vision &amp; Mission</h2>
+
+          <h3 className="text-xl font-semibold text-primary mb-2">Vision</h3>
+          <p>
+            Our vision is to become a leading force in the technical service industry by embracing cutting-edge technologies, promoting a culture of continuous improvement, and delivering unparalleled value to our clients. We aim to set new benchmarks for quality, reliability, and sustainability, driving meaningful impact in the communities we serve and beyond.
+          </p>
+
+          <h3 className="text-xl font-semibold text-primary mt-4 mb-2">Mission</h3>
+          <p>
+            Our mission is to empower our clients with innovative, high-quality, and sustainable technical solutions. We strive to exceed expectations through exceptional service, transparency, and a commitment to excellence, fostering growth and trust in every relationship we build.
+          </p>
+        </section>
       </div>
     </div>
   );
