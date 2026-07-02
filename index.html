@@ -20,5 +20,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Ensure footer credit shows the requested name even if an older bundle is cached
+      document.addEventListener('DOMContentLoaded', function () {
+        try {
+          document.querySelectorAll('footer span').forEach(function (el) {
+            if (el.textContent && /Made by/i.test(el.textContent)) {
+              el.textContent = 'Made by Apex Cybernetics';
+            }
+          });
+        } catch (e) {
+          // no-op
+        }
+      });
+    </script>
   </body>
 </html>
