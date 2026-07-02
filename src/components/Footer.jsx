@@ -119,7 +119,7 @@ export default function Footer() {
               <span>&copy; {currentYear} FINMENT Namibia. All rights reserved.</span>
             </p>
             <p>
-              <span>Made by Martin Kondjila</span>
+              <span>Made by Apex Cybernetics</span>
             </p>
           </div>
         </div>
